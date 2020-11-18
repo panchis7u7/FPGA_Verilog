@@ -1,0 +1,8 @@
+|Top
+x1 => ~NO_FANOUT~
+x2 => ~NO_FANOUT~
+x3 => ~NO_FANOUT~
+z1 <= <GND>
+z2 <= <GND>
+
+

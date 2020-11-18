@@ -2,7 +2,7 @@ module Clock_Divider(Clkin, Clkout);
 input Clkin;
 output Clkout;
 reg[27:0] contador = 28'd0;
-parameter DIVISOR = 28'd2;
+parameter DIVISOR = 28'd50000000;
 
 always @(posedge Clkin)
 begin
