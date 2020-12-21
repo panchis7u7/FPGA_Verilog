@@ -1,8 +1,10 @@
 |Top
-x1 => ~NO_FANOUT~
-x2 => ~NO_FANOUT~
-x3 => ~NO_FANOUT~
-z1 <= <GND>
-z2 <= <GND>
+x1 => inst1.IN0
+x1 => inst2.IN0
+x2 => inst1.IN1
+x2 => inst2.IN1
+x3 => inst1.IN2
+x3 => inst2.IN2
+z1 << inst3.DB_MAX_OUTPUT_PORT_TYPE
 
 
