@@ -1,0 +1,20 @@
+|Servo_Controller
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+adc[0] => ~NO_FANOUT~
+adc[1] => ~NO_FANOUT~
+adc[2] => ~NO_FANOUT~
+adc[3] => ~NO_FANOUT~
+adc[4] => ~NO_FANOUT~
+adc[5] => ~NO_FANOUT~
+adc[6] => ~NO_FANOUT~
+adc[7] => ~NO_FANOUT~
+motor <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
