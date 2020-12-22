@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Servo_Controller
-Mon Dec 21 13:27:03 2020
+Mon Dec 21 19:20:28 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -14,9 +14,10 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: Clock_Divider:c1
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -43,15 +44,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Dec 21 13:27:03 2020       ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 21 19:20:28 2020       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; Servo_Controller                            ;
-; Top-level Entity Name              ; Servo_Controller                            ;
+; Top-level Entity Name              ; Top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 12                                          ;
-;     Total combinational functions  ; 12                                          ;
-;     Dedicated logic registers      ; 8                                           ;
-; Total registers                    ; 8                                           ;
+; Total logic elements               ; 66                                          ;
+;     Total combinational functions  ; 66                                          ;
+;     Dedicated logic registers      ; 36                                          ;
+; Total registers                    ; 36                                          ;
 ; Total pins                         ; 10                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -66,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE6E22C8        ;                    ;
-; Top-level entity name                                            ; Servo_Controller   ; Servo_Controller   ;
+; Top-level entity name                                            ; Top                ; Servo_Controller   ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -163,54 +164,58 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                     ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                       ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
-; Top.v                            ; yes             ; User Verilog HDL File  ; E:/Proyectos/FPGA - Verilog/Servo_Controller/Top.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                 ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+; Top.v                            ; yes             ; User Verilog HDL File  ; E:/Proyectos/FPGA - Verilog/Servo_Controller/Top.v           ;         ;
+; Clock_Divider.v                  ; yes             ; User Verilog HDL File  ; E:/Proyectos/FPGA - Verilog/Servo_Controller/Clock_Divider.v ;         ;
+; Controller.v                     ; yes             ; User Verilog HDL File  ; E:/Proyectos/FPGA - Verilog/Servo_Controller/Controller.v    ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 12          ;
-;                                             ;             ;
-; Total combinational functions               ; 12          ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 3           ;
-;     -- 3 input functions                    ; 1           ;
-;     -- <=2 input functions                  ; 8           ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 5           ;
-;     -- arithmetic mode                      ; 7           ;
-;                                             ;             ;
-; Total registers                             ; 8           ;
-;     -- Dedicated logic registers            ; 8           ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 10          ;
-;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; LessThan0~1 ;
-; Maximum fan-out                             ; 8           ;
-; Total fan-out                               ; 65          ;
-; Average fan-out                             ; 1.63        ;
-+---------------------------------------------+-------------+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                ;
++---------------------------------------------+------------------------------+
+; Resource                                    ; Usage                        ;
++---------------------------------------------+------------------------------+
+; Estimated Total logic elements              ; 66                           ;
+;                                             ;                              ;
+; Total combinational functions               ; 66                           ;
+; Logic element usage by number of LUT inputs ;                              ;
+;     -- 4 input functions                    ; 19                           ;
+;     -- 3 input functions                    ; 8                            ;
+;     -- <=2 input functions                  ; 39                           ;
+;                                             ;                              ;
+; Logic elements by mode                      ;                              ;
+;     -- normal mode                          ; 25                           ;
+;     -- arithmetic mode                      ; 41                           ;
+;                                             ;                              ;
+; Total registers                             ; 36                           ;
+;     -- Dedicated logic registers            ; 36                           ;
+;     -- I/O registers                        ; 0                            ;
+;                                             ;                              ;
+; I/O pins                                    ; 10                           ;
+;                                             ;                              ;
+; Embedded Multiplier 9-bit elements          ; 0                            ;
+;                                             ;                              ;
+; Maximum fan-out node                        ; Clock_Divider:c1|LessThan0~9 ;
+; Maximum fan-out                             ; 28                           ;
+; Total fan-out                               ; 295                          ;
+; Average fan-out                             ; 2.42                         ;
++---------------------------------------------+------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                           ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name      ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+------------------+--------------+
-; |Servo_Controller          ; 12 (12)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |Servo_Controller   ; Servo_Controller ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                          ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Entity Name   ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+---------------+--------------+
+; |Top                       ; 66 (1)              ; 36 (0)                    ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |Top                  ; Top           ; work         ;
+;    |Clock_Divider:c1|      ; 46 (46)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|Clock_Divider:c1 ; Clock_Divider ; work         ;
+;    |Controller:sc|         ; 19 (19)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|Controller:sc    ; Controller    ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -219,8 +224,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 8     ;
-; Number of registers using Synchronous Clear  ; 8     ;
+; Total registers                              ; 36    ;
+; Number of registers using Synchronous Clear  ; 36    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -229,24 +234,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Clock_Divider:c1   ;
++----------------+------------------------------+-----------------+
+; Parameter Name ; Value                        ; Type            ;
++----------------+------------------------------+-----------------+
+; DIVISOR        ; 0000100110001001011010000000 ; Unsigned Binary ;
++----------------+------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 10                          ;
-; cycloneiii_ff         ; 8                           ;
-;     SCLR              ; 8                           ;
-; cycloneiii_lcell_comb ; 12                          ;
-;     arith             ; 7                           ;
-;         2 data inputs ; 7                           ;
-;     normal            ; 5                           ;
-;         1 data inputs ; 1                           ;
+; cycloneiii_ff         ; 36                          ;
+;     SCLR              ; 36                          ;
+; cycloneiii_lcell_comb ; 66                          ;
+;     arith             ; 41                          ;
+;         2 data inputs ; 34                          ;
+;         3 data inputs ; 7                           ;
+;     normal            ; 25                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 3                           ;
 ;         3 data inputs ; 1                           ;
-;         4 data inputs ; 3                           ;
+;         4 data inputs ; 19                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.61                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.73                        ;
 +-----------------------+-----------------------------+
 
 
@@ -265,35 +282,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Mon Dec 21 13:26:54 2020
+    Info: Processing started: Mon Dec 21 19:20:19 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Servo_Controller -c Servo_Controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
-    Info (12023): Found entity 1: Servo_Controller File: E:/Proyectos/FPGA - Verilog/Servo_Controller/Top.v Line: 1
-Info (12127): Elaborating entity "Servo_Controller" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at Top.v(13): truncated value with size 32 to match size of target (8) File: E:/Proyectos/FPGA - Verilog/Servo_Controller/Top.v Line: 13
-Warning (10230): Verilog HDL assignment warning at Top.v(17): truncated value with size 32 to match size of target (1) File: E:/Proyectos/FPGA - Verilog/Servo_Controller/Top.v Line: 17
+    Info (12023): Found entity 1: Top File: E:/Proyectos/FPGA - Verilog/Servo_Controller/Top.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file clock_divider.v
+    Info (12023): Found entity 1: Clock_Divider File: E:/Proyectos/FPGA - Verilog/Servo_Controller/Clock_Divider.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file controller.v
+    Info (12023): Found entity 1: Controller File: E:/Proyectos/FPGA - Verilog/Servo_Controller/Controller.v Line: 1
+Info (12127): Elaborating entity "Top" for the top level hierarchy
+Info (12128): Elaborating entity "Clock_Divider" for hierarchy "Clock_Divider:c1" File: E:/Proyectos/FPGA - Verilog/Servo_Controller/Top.v Line: 8
+Info (12128): Elaborating entity "Controller" for hierarchy "Controller:sc" File: E:/Proyectos/FPGA - Verilog/Servo_Controller/Top.v Line: 9
+Warning (10230): Verilog HDL assignment warning at Controller.v(12): truncated value with size 32 to match size of target (8) File: E:/Proyectos/FPGA - Verilog/Servo_Controller/Controller.v Line: 12
+Warning (10230): Verilog HDL assignment warning at Controller.v(16): truncated value with size 32 to match size of target (1) File: E:/Proyectos/FPGA - Verilog/Servo_Controller/Controller.v Line: 16
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "adc[0]" File: E:/Proyectos/FPGA - Verilog/Servo_Controller/Top.v Line: 4
-    Warning (15610): No output dependent on input pin "adc[1]" File: E:/Proyectos/FPGA - Verilog/Servo_Controller/Top.v Line: 4
-    Warning (15610): No output dependent on input pin "adc[2]" File: E:/Proyectos/FPGA - Verilog/Servo_Controller/Top.v Line: 4
-    Warning (15610): No output dependent on input pin "adc[3]" File: E:/Proyectos/FPGA - Verilog/Servo_Controller/Top.v Line: 4
-    Warning (15610): No output dependent on input pin "adc[4]" File: E:/Proyectos/FPGA - Verilog/Servo_Controller/Top.v Line: 4
-    Warning (15610): No output dependent on input pin "adc[5]" File: E:/Proyectos/FPGA - Verilog/Servo_Controller/Top.v Line: 4
-    Warning (15610): No output dependent on input pin "adc[6]" File: E:/Proyectos/FPGA - Verilog/Servo_Controller/Top.v Line: 4
-    Warning (15610): No output dependent on input pin "adc[7]" File: E:/Proyectos/FPGA - Verilog/Servo_Controller/Top.v Line: 4
-Info (21057): Implemented 22 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 76 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 12 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4759 megabytes
-    Info: Processing ended: Mon Dec 21 13:27:03 2020
+    Info (21061): Implemented 66 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4760 megabytes
+    Info: Processing ended: Mon Dec 21 19:20:28 2020
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Total CPU time (on all processors): 00:00:23
 
 

@@ -1,18 +1,11 @@
-module Servo_Controller (
+module Top (clk, adc, motor);
 
-	input clk,
-	input wire[7:0] adc,
-	output motor
-	
-);
+input clk;
+input [7:0] adc;
+output motor;
+wire out_clk;
 
-reg[6:0] counter = 0;
-always@(posedge clk)
-begin
-	if(counter < 100)
-		counter <= counter + 1;
-	else counter <= 0;
-end
+Clock_Divider c1(clk, out_clk);
+Controller sc(out_clk, adc, motor);
 
-assign motor = (counter < 20) ? 1:0;
 endmodule

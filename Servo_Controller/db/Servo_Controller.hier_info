@@ -1,4 +1,49 @@
-|Servo_Controller
+|Top
+clk => clk.IN1
+adc[0] => adc[0].IN1
+adc[1] => adc[1].IN1
+adc[2] => adc[2].IN1
+adc[3] => adc[3].IN1
+adc[4] => adc[4].IN1
+adc[5] => adc[5].IN1
+adc[6] => adc[6].IN1
+adc[7] => adc[7].IN1
+motor << Controller:sc.port2
+
+
+|Top|Clock_Divider:c1
+Clkin => contador[0].CLK
+Clkin => contador[1].CLK
+Clkin => contador[2].CLK
+Clkin => contador[3].CLK
+Clkin => contador[4].CLK
+Clkin => contador[5].CLK
+Clkin => contador[6].CLK
+Clkin => contador[7].CLK
+Clkin => contador[8].CLK
+Clkin => contador[9].CLK
+Clkin => contador[10].CLK
+Clkin => contador[11].CLK
+Clkin => contador[12].CLK
+Clkin => contador[13].CLK
+Clkin => contador[14].CLK
+Clkin => contador[15].CLK
+Clkin => contador[16].CLK
+Clkin => contador[17].CLK
+Clkin => contador[18].CLK
+Clkin => contador[19].CLK
+Clkin => contador[20].CLK
+Clkin => contador[21].CLK
+Clkin => contador[22].CLK
+Clkin => contador[23].CLK
+Clkin => contador[24].CLK
+Clkin => contador[25].CLK
+Clkin => contador[26].CLK
+Clkin => contador[27].CLK
+Clkout <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|Controller:sc
 clk => counter[0].CLK
 clk => counter[1].CLK
 clk => counter[2].CLK
@@ -7,14 +52,14 @@ clk => counter[4].CLK
 clk => counter[5].CLK
 clk => counter[6].CLK
 clk => counter[7].CLK
-adc[0] => ~NO_FANOUT~
-adc[1] => ~NO_FANOUT~
-adc[2] => ~NO_FANOUT~
-adc[3] => ~NO_FANOUT~
-adc[4] => ~NO_FANOUT~
-adc[5] => ~NO_FANOUT~
-adc[6] => ~NO_FANOUT~
-adc[7] => ~NO_FANOUT~
+adc[0] => LessThan1.IN8
+adc[1] => LessThan1.IN7
+adc[2] => LessThan1.IN6
+adc[3] => LessThan1.IN5
+adc[4] => LessThan1.IN4
+adc[5] => LessThan1.IN3
+adc[6] => LessThan1.IN2
+adc[7] => LessThan1.IN1
 motor <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 
 
