@@ -1,5 +1,5 @@
 Timing Analyzer report for Servo_Controller
-Mon Dec 21 19:20:39 2020
+Mon Dec 21 20:08:12 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -110,9 +110,9 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.9%      ;
-;     Processor 3            ;   3.5%      ;
-;     Processor 4            ;   3.5%      ;
+;     Processor 2            ;   4.1%      ;
+;     Processor 3            ;   3.7%      ;
+;     Processor 4            ;   3.6%      ;
 +----------------------------+-------------+
 
 
@@ -1360,13 +1360,13 @@ No paths to report.
 ; 0.482 ; Clock_Divider:c1|contador[16] ; Clock_Divider:c1|contador[18] ; clk                           ; clk         ; 0.000        ; 0.026      ; 0.592      ;
 ; 0.484 ; Clock_Divider:c1|contador[9]  ; Clock_Divider:c1|contador[15] ; clk                           ; clk         ; 0.000        ; 0.212      ; 0.780      ;
 ; 0.486 ; Clock_Divider:c1|contador[12] ; Clock_Divider:c1|contador[19] ; clk                           ; clk         ; 0.000        ; 0.212      ; 0.782      ;
-; 0.487 ; Clock_Divider:c1|contador[6]  ; Clock_Divider:c1|contador[7]  ; clk                           ; clk         ; 0.000        ; 0.025      ; 0.596      ;
 ; 0.487 ; Clock_Divider:c1|contador[8]  ; Clock_Divider:c1|contador[15] ; clk                           ; clk         ; 0.000        ; 0.212      ; 0.783      ;
 ; 0.487 ; Clock_Divider:c1|contador[9]  ; Clock_Divider:c1|contador[16] ; clk                           ; clk         ; 0.000        ; 0.212      ; 0.783      ;
+; 0.487 ; Clock_Divider:c1|contador[6]  ; Clock_Divider:c1|contador[7]  ; clk                           ; clk         ; 0.000        ; 0.025      ; 0.596      ;
 ; 0.489 ; Clock_Divider:c1|contador[12] ; Clock_Divider:c1|contador[20] ; clk                           ; clk         ; 0.000        ; 0.212      ; 0.785      ;
 ; 0.489 ; Clock_Divider:c1|contador[20] ; Clock_Divider:c1|contador[21] ; clk                           ; clk         ; 0.000        ; 0.026      ; 0.599      ;
-; 0.490 ; Clock_Divider:c1|contador[6]  ; Clock_Divider:c1|contador[8]  ; clk                           ; clk         ; 0.000        ; 0.025      ; 0.599      ;
 ; 0.490 ; Clock_Divider:c1|contador[8]  ; Clock_Divider:c1|contador[16] ; clk                           ; clk         ; 0.000        ; 0.212      ; 0.786      ;
+; 0.490 ; Clock_Divider:c1|contador[6]  ; Clock_Divider:c1|contador[8]  ; clk                           ; clk         ; 0.000        ; 0.025      ; 0.599      ;
 ; 0.492 ; Clock_Divider:c1|contador[20] ; Clock_Divider:c1|contador[22] ; clk                           ; clk         ; 0.000        ; 0.026      ; 0.602      ;
 ; 0.501 ; Clock_Divider:c1|contador[6]  ; Clock_Divider:c1|contador[14] ; clk                           ; clk         ; 0.000        ; 0.212      ; 0.797      ;
 +-------+-------------------------------+-------------------------------+-------------------------------+-------------+--------------+------------+------------+
@@ -1572,7 +1572,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Mon Dec 21 19:20:36 2020
+    Info: Processing started: Mon Dec 21 20:08:10 2020
 Info: Command: quartus_sta Servo_Controller -c Servo_Controller
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1655,8 +1655,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4759 megabytes
-    Info: Processing ended: Mon Dec 21 19:20:39 2020
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Mon Dec 21 20:08:12 2020
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 
