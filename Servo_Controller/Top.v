@@ -1,11 +1,9 @@
-module Top (clk, adc, motor);
+module Top (clk, adc, pwm);
 
 input clk;
 input [7:0] adc;
-output motor;
-wire out_clk;
+output pwm;
 
-Clock_Divider c1(clk, out_clk);
-Controller sc(out_clk, adc, motor);
+PWM_Divider(clk, adc, pwm);
 
 endmodule

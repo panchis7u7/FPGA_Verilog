@@ -1,5 +1,5 @@
 Flow report for Servo_Controller
-Mon Dec 21 20:08:12 2020
+Tue Dec 22 20:02:28 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,17 +41,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Dec 21 20:08:09 2020       ;
+; Flow Status                        ; Successful - Tue Dec 22 20:02:24 2020       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; Servo_Controller                            ;
 ; Top-level Entity Name              ; Top                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 67 / 6,272 ( 1 % )                          ;
-;     Total combinational functions  ; 66 / 6,272 ( 1 % )                          ;
-;     Dedicated logic registers      ; 36 / 6,272 ( < 1 % )                        ;
-; Total registers                    ; 36                                          ;
+; Total logic elements               ; 91 / 6,272 ( 1 % )                          ;
+;     Total combinational functions  ; 88 / 6,272 ( 1 % )                          ;
+;     Dedicated logic registers      ; 28 / 6,272 ( < 1 % )                        ;
+; Total registers                    ; 28                                          ;
 ; Total pins                         ; 10 / 92 ( 11 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/21/2020 20:07:52 ;
+; Start date & time ; 12/22/2020 20:02:08 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Servo_Controller    ;
 +-------------------+---------------------+
@@ -76,13 +76,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+------------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value    ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+------------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 273549556551941.160860287216028        ; --               ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 273549556551941.160868892816784        ; --               ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --               ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --               ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --               ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --               ; Top         ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --               ; Top         ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --               ; Top         ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --               ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --               ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --               ; --          ; --         ;
 ; TOP_LEVEL_ENTITY                    ; Top                                    ; Servo_Controller ; --          ; --         ;
 +-------------------------------------+----------------------------------------+------------------+-------------+------------+
@@ -93,11 +95,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4758 MB             ; 00:00:22                           ;
-; Fitter               ; 00:00:04     ; 1.0                     ; 5487 MB             ; 00:00:06                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4678 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4759 MB             ; 00:00:02                           ;
-; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:31                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4763 MB             ; 00:00:23                           ;
+; Fitter               ; 00:00:04     ; 1.0                     ; 5507 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:00     ; 1.0                     ; 4679 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4752 MB             ; 00:00:02                           ;
+; Total                ; 00:00:15     ; --                      ; --                  ; 00:00:31                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

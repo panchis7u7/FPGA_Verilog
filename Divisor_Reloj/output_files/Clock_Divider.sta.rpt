@@ -1,5 +1,5 @@
 Timing Analyzer report for Clock_Divider
-Tue Nov 17 21:09:26 2020
+Tue Dec 22 13:44:58 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -97,12 +97,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
+; Average used               ; 1.01        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.1%      ;
+;     Processor 2            ;   0.5%      ;
 ;     Processors 3-4         ;   0.3%      ;
 +----------------------------+-------------+
 
@@ -121,7 +121,7 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 195.35 MHz ; 195.35 MHz      ; Clkin      ;      ;
+; 223.16 MHz ; 223.16 MHz      ; Clkin      ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -137,7 +137,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+--------------------+
 ; Clock ; Slack  ; End Point TNS      ;
 +-------+--------+--------------------+
-; Clkin ; -4.119 ; -104.146           ;
+; Clkin ; -3.481 ; -93.942            ;
 +-------+--------+--------------------+
 
 
@@ -146,7 +146,7 @@ HTML report is unavailable in plain text report export.
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; Clkin ; 0.612 ; 0.000              ;
+; Clkin ; 0.743 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -176,106 +176,106 @@ No paths to report.
 +--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
-; -4.119 ; contador[8]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 5.031      ;
-; -4.119 ; contador[8]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 5.031      ;
-; -4.119 ; contador[8]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 5.031      ;
-; -3.942 ; contador[2]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.854      ;
-; -3.942 ; contador[2]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.854      ;
-; -3.942 ; contador[2]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.854      ;
-; -3.940 ; contador[1]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.852      ;
-; -3.940 ; contador[1]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.852      ;
-; -3.940 ; contador[1]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.852      ;
-; -3.861 ; contador[9]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.773      ;
-; -3.861 ; contador[9]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.773      ;
-; -3.861 ; contador[9]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.773      ;
-; -3.808 ; contador[17] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.577     ; 4.232      ;
-; -3.808 ; contador[17] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.577     ; 4.232      ;
-; -3.808 ; contador[17] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.577     ; 4.232      ;
-; -3.807 ; contador[10] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.719      ;
-; -3.807 ; contador[10] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.719      ;
-; -3.807 ; contador[10] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.719      ;
-; -3.764 ; contador[0]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.676      ;
-; -3.764 ; contador[0]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.676      ;
-; -3.764 ; contador[0]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.676      ;
-; -3.763 ; contador[26] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.577     ; 4.187      ;
-; -3.763 ; contador[26] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.577     ; 4.187      ;
-; -3.763 ; contador[26] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.577     ; 4.187      ;
-; -3.751 ; contador[8]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.671      ;
-; -3.751 ; contador[8]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.671      ;
-; -3.751 ; contador[8]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.671      ;
-; -3.751 ; contador[8]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.671      ;
-; -3.751 ; contador[8]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.671      ;
-; -3.751 ; contador[8]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.671      ;
-; -3.751 ; contador[8]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.671      ;
-; -3.751 ; contador[8]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.671      ;
-; -3.751 ; contador[8]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.671      ;
-; -3.751 ; contador[8]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.671      ;
-; -3.751 ; contador[8]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.671      ;
-; -3.751 ; contador[8]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.671      ;
-; -3.751 ; contador[8]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.671      ;
-; -3.751 ; contador[8]  ; contador[13] ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.671      ;
-; -3.661 ; contador[6]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.573      ;
-; -3.661 ; contador[6]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.573      ;
-; -3.661 ; contador[6]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.573      ;
-; -3.643 ; contador[8]  ; contador[23] ; Clkin        ; Clkin       ; 1.000        ; 0.387      ; 5.031      ;
-; -3.643 ; contador[8]  ; contador[17] ; Clkin        ; Clkin       ; 1.000        ; 0.387      ; 5.031      ;
-; -3.643 ; contador[8]  ; contador[19] ; Clkin        ; Clkin       ; 1.000        ; 0.387      ; 5.031      ;
-; -3.643 ; contador[8]  ; contador[18] ; Clkin        ; Clkin       ; 1.000        ; 0.387      ; 5.031      ;
-; -3.643 ; contador[8]  ; contador[21] ; Clkin        ; Clkin       ; 1.000        ; 0.387      ; 5.031      ;
-; -3.643 ; contador[8]  ; contador[24] ; Clkin        ; Clkin       ; 1.000        ; 0.387      ; 5.031      ;
-; -3.643 ; contador[8]  ; contador[25] ; Clkin        ; Clkin       ; 1.000        ; 0.387      ; 5.031      ;
-; -3.643 ; contador[8]  ; contador[26] ; Clkin        ; Clkin       ; 1.000        ; 0.387      ; 5.031      ;
-; -3.623 ; contador[23] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.577     ; 4.047      ;
-; -3.623 ; contador[23] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.577     ; 4.047      ;
-; -3.623 ; contador[23] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.577     ; 4.047      ;
-; -3.611 ; contador[18] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.577     ; 4.035      ;
-; -3.611 ; contador[18] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.577     ; 4.035      ;
-; -3.611 ; contador[18] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.577     ; 4.035      ;
-; -3.606 ; contador[13] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.518      ;
-; -3.606 ; contador[13] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.518      ;
-; -3.606 ; contador[13] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.518      ;
-; -3.592 ; contador[2]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.512      ;
-; -3.592 ; contador[2]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.512      ;
-; -3.592 ; contador[2]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.512      ;
-; -3.592 ; contador[2]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.512      ;
-; -3.592 ; contador[2]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.512      ;
-; -3.592 ; contador[2]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.512      ;
-; -3.592 ; contador[2]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.512      ;
-; -3.592 ; contador[2]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.512      ;
-; -3.592 ; contador[2]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.512      ;
-; -3.592 ; contador[2]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.512      ;
-; -3.592 ; contador[2]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.512      ;
-; -3.592 ; contador[2]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.512      ;
-; -3.592 ; contador[2]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.512      ;
-; -3.592 ; contador[2]  ; contador[13] ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.512      ;
-; -3.590 ; contador[1]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.510      ;
-; -3.590 ; contador[1]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.510      ;
-; -3.590 ; contador[1]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.510      ;
-; -3.590 ; contador[1]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.510      ;
-; -3.590 ; contador[1]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.510      ;
-; -3.590 ; contador[1]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.510      ;
-; -3.590 ; contador[1]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.510      ;
-; -3.590 ; contador[1]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.510      ;
-; -3.590 ; contador[1]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.510      ;
-; -3.590 ; contador[1]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.510      ;
-; -3.590 ; contador[1]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.510      ;
-; -3.590 ; contador[1]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.510      ;
-; -3.590 ; contador[1]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.510      ;
-; -3.590 ; contador[1]  ; contador[13] ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.510      ;
-; -3.577 ; contador[21] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.577     ; 4.001      ;
-; -3.577 ; contador[21] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.577     ; 4.001      ;
-; -3.577 ; contador[21] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.577     ; 4.001      ;
-; -3.572 ; contador[3]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.484      ;
-; -3.572 ; contador[3]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.484      ;
-; -3.572 ; contador[3]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.484      ;
-; -3.571 ; contador[5]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.483      ;
-; -3.571 ; contador[5]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.483      ;
-; -3.571 ; contador[5]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.483      ;
-; -3.568 ; contador[4]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.480      ;
-; -3.568 ; contador[4]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.480      ;
-; -3.568 ; contador[4]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.089     ; 4.480      ;
-; -3.566 ; contador[27] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.486      ;
-; -3.566 ; contador[27] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.486      ;
+; -3.481 ; contador[7]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.400      ;
+; -3.481 ; contador[7]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.400      ;
+; -3.481 ; contador[7]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.400      ;
+; -3.481 ; contador[7]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.400      ;
+; -3.481 ; contador[7]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.400      ;
+; -3.481 ; contador[7]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.400      ;
+; -3.481 ; contador[7]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.400      ;
+; -3.481 ; contador[7]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.400      ;
+; -3.481 ; contador[7]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.400      ;
+; -3.481 ; contador[7]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.400      ;
+; -3.481 ; contador[7]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.400      ;
+; -3.481 ; contador[7]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.400      ;
+; -3.481 ; contador[7]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.400      ;
+; -3.397 ; contador[12] ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.316      ;
+; -3.397 ; contador[12] ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.316      ;
+; -3.397 ; contador[12] ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.316      ;
+; -3.397 ; contador[12] ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.316      ;
+; -3.397 ; contador[12] ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.316      ;
+; -3.397 ; contador[12] ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.316      ;
+; -3.397 ; contador[12] ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.316      ;
+; -3.397 ; contador[12] ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.316      ;
+; -3.397 ; contador[12] ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.316      ;
+; -3.397 ; contador[12] ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.316      ;
+; -3.397 ; contador[12] ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.316      ;
+; -3.397 ; contador[12] ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.316      ;
+; -3.397 ; contador[12] ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.316      ;
+; -3.390 ; contador[15] ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.310      ;
+; -3.390 ; contador[15] ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.310      ;
+; -3.390 ; contador[15] ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.310      ;
+; -3.390 ; contador[15] ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.310      ;
+; -3.390 ; contador[15] ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.310      ;
+; -3.390 ; contador[15] ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.310      ;
+; -3.390 ; contador[15] ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.310      ;
+; -3.390 ; contador[15] ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.310      ;
+; -3.390 ; contador[15] ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.310      ;
+; -3.390 ; contador[15] ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.310      ;
+; -3.390 ; contador[15] ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.310      ;
+; -3.390 ; contador[15] ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.310      ;
+; -3.390 ; contador[15] ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.081     ; 4.310      ;
+; -3.371 ; contador[6]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.290      ;
+; -3.371 ; contador[6]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.290      ;
+; -3.371 ; contador[6]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.290      ;
+; -3.371 ; contador[6]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.290      ;
+; -3.371 ; contador[6]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.290      ;
+; -3.371 ; contador[6]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.290      ;
+; -3.371 ; contador[6]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.290      ;
+; -3.371 ; contador[6]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.290      ;
+; -3.371 ; contador[6]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.290      ;
+; -3.371 ; contador[6]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.290      ;
+; -3.371 ; contador[6]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.290      ;
+; -3.371 ; contador[6]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.290      ;
+; -3.371 ; contador[6]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.290      ;
+; -3.312 ; contador[11] ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.231      ;
+; -3.312 ; contador[11] ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.231      ;
+; -3.312 ; contador[11] ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.231      ;
+; -3.312 ; contador[11] ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.231      ;
+; -3.312 ; contador[11] ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.231      ;
+; -3.312 ; contador[11] ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.231      ;
+; -3.312 ; contador[11] ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.231      ;
+; -3.312 ; contador[11] ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.231      ;
+; -3.312 ; contador[11] ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.231      ;
+; -3.312 ; contador[11] ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.231      ;
+; -3.312 ; contador[11] ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.231      ;
+; -3.312 ; contador[11] ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.231      ;
+; -3.312 ; contador[11] ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.231      ;
+; -3.270 ; contador[8]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.189      ;
+; -3.270 ; contador[8]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.189      ;
+; -3.270 ; contador[8]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.189      ;
+; -3.270 ; contador[8]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.189      ;
+; -3.270 ; contador[8]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.189      ;
+; -3.270 ; contador[8]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.189      ;
+; -3.270 ; contador[8]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.189      ;
+; -3.270 ; contador[8]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.189      ;
+; -3.270 ; contador[8]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.189      ;
+; -3.270 ; contador[8]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.189      ;
+; -3.270 ; contador[8]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.189      ;
+; -3.270 ; contador[8]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.189      ;
+; -3.270 ; contador[8]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.189      ;
+; -3.267 ; contador[3]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.186      ;
+; -3.267 ; contador[3]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.186      ;
+; -3.267 ; contador[3]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.186      ;
+; -3.267 ; contador[3]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.186      ;
+; -3.267 ; contador[3]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.186      ;
+; -3.267 ; contador[3]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.186      ;
+; -3.267 ; contador[3]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.186      ;
+; -3.267 ; contador[3]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.186      ;
+; -3.267 ; contador[3]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.186      ;
+; -3.267 ; contador[3]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.186      ;
+; -3.267 ; contador[3]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.186      ;
+; -3.267 ; contador[3]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.186      ;
+; -3.267 ; contador[3]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.186      ;
+; -3.258 ; contador[9]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.177      ;
+; -3.258 ; contador[9]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.177      ;
+; -3.258 ; contador[9]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.177      ;
+; -3.258 ; contador[9]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.177      ;
+; -3.258 ; contador[9]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.177      ;
+; -3.258 ; contador[9]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.177      ;
+; -3.258 ; contador[9]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.177      ;
+; -3.258 ; contador[9]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.177      ;
+; -3.258 ; contador[9]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.082     ; 4.177      ;
 +--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -284,106 +284,106 @@ No paths to report.
 +-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
-; 0.612 ; contador[20] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.577      ; 1.401      ;
-; 0.613 ; contador[22] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.577      ; 1.402      ;
-; 0.622 ; contador[22] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.577      ; 1.411      ;
-; 0.724 ; contador[19] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.037      ;
-; 0.727 ; contador[21] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.040      ;
-; 0.741 ; contador[17] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.054      ;
-; 0.743 ; contador[25] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.056      ;
-; 0.744 ; contador[23] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.057      ;
-; 0.744 ; contador[1]  ; contador[1]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.037      ;
-; 0.745 ; contador[18] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.058      ;
-; 0.745 ; contador[5]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.038      ;
-; 0.746 ; contador[26] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.059      ;
-; 0.746 ; contador[24] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.059      ;
-; 0.746 ; contador[4]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.039      ;
-; 0.747 ; contador[20] ; contador[20] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.040      ;
-; 0.747 ; contador[2]  ; contador[2]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.040      ;
-; 0.748 ; contador[22] ; contador[22] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.041      ;
-; 0.752 ; contador[20] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.577      ; 1.541      ;
-; 0.753 ; contador[22] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.577      ; 1.542      ;
-; 0.760 ; contador[11] ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.053      ;
-; 0.760 ; contador[13] ; contador[13] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.053      ;
-; 0.761 ; contador[20] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.577      ; 1.550      ;
-; 0.761 ; contador[3]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.054      ;
-; 0.761 ; contador[9]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.054      ;
-; 0.762 ; contador[22] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.577      ; 1.551      ;
-; 0.763 ; contador[7]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.056      ;
-; 0.764 ; contador[27] ; contador[27] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.057      ;
-; 0.764 ; contador[10] ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.057      ;
-; 0.764 ; contador[12] ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.057      ;
-; 0.765 ; contador[8]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.058      ;
-; 0.770 ; contador[0]  ; contador[0]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.063      ;
-; 0.773 ; contador[6]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.066      ;
-; 0.886 ; contador[13] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.581      ; 1.679      ;
-; 0.892 ; contador[20] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.577      ; 1.681      ;
-; 0.895 ; contador[13] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.581      ; 1.688      ;
-; 0.901 ; contador[20] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.577      ; 1.690      ;
-; 0.905 ; contador[12] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.581      ; 1.698      ;
-; 0.914 ; contador[12] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.581      ; 1.707      ;
-; 1.026 ; contador[13] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.581      ; 1.819      ;
-; 1.026 ; contador[11] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.581      ; 1.819      ;
-; 1.035 ; contador[11] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.581      ; 1.828      ;
-; 1.045 ; contador[12] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.581      ; 1.838      ;
-; 1.045 ; contador[10] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.581      ; 1.838      ;
-; 1.054 ; contador[10] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.581      ; 1.847      ;
-; 1.096 ; contador[17] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.409      ;
-; 1.098 ; contador[23] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.411      ;
-; 1.098 ; contador[25] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.411      ;
-; 1.099 ; contador[1]  ; contador[2]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.392      ;
-; 1.099 ; contador[5]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.392      ;
-; 1.106 ; contador[18] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.419      ;
-; 1.107 ; contador[24] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.420      ;
-; 1.107 ; contador[4]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.400      ;
-; 1.108 ; contador[0]  ; contador[1]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.401      ;
-; 1.108 ; contador[2]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.401      ;
-; 1.115 ; contador[11] ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.408      ;
-; 1.116 ; contador[24] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.429      ;
-; 1.116 ; contador[3]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.409      ;
-; 1.116 ; contador[9]  ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.409      ;
-; 1.116 ; contador[4]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.409      ;
-; 1.117 ; contador[20] ; contador[22] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.410      ;
-; 1.117 ; contador[7]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.410      ;
-; 1.117 ; contador[0]  ; contador[2]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.410      ;
-; 1.117 ; contador[2]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.410      ;
-; 1.125 ; contador[10] ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.418      ;
-; 1.125 ; contador[12] ; contador[13] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.418      ;
-; 1.126 ; contador[8]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.419      ;
-; 1.134 ; contador[6]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.427      ;
-; 1.134 ; contador[10] ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.427      ;
-; 1.135 ; contador[8]  ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.428      ;
-; 1.143 ; contador[6]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.436      ;
-; 1.166 ; contador[13] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.581      ; 1.959      ;
-; 1.166 ; contador[11] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.581      ; 1.959      ;
-; 1.167 ; contador[9]  ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.581      ; 1.960      ;
-; 1.176 ; contador[9]  ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.581      ; 1.969      ;
-; 1.185 ; contador[12] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.581      ; 1.978      ;
-; 1.185 ; contador[10] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.581      ; 1.978      ;
-; 1.186 ; contador[8]  ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.581      ; 1.979      ;
-; 1.195 ; contador[8]  ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.581      ; 1.988      ;
-; 1.210 ; contador[19] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.523      ;
-; 1.212 ; contador[21] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.525      ;
-; 1.221 ; contador[21] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.534      ;
-; 1.227 ; contador[17] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.540      ;
-; 1.229 ; contador[23] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.542      ;
-; 1.230 ; contador[1]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.523      ;
-; 1.230 ; contador[5]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.523      ;
-; 1.238 ; contador[23] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.551      ;
-; 1.239 ; contador[1]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.532      ;
-; 1.239 ; contador[5]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.532      ;
-; 1.246 ; contador[18] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.101      ; 1.559      ;
-; 1.246 ; contador[11] ; contador[13] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.539      ;
-; 1.247 ; contador[3]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.540      ;
-; 1.247 ; contador[9]  ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.540      ;
-; 1.247 ; contador[4]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.540      ;
-; 1.248 ; contador[7]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.541      ;
-; 1.248 ; contador[0]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.541      ;
-; 1.248 ; contador[2]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.541      ;
-; 1.256 ; contador[3]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.549      ;
-; 1.256 ; contador[9]  ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.549      ;
-; 1.256 ; contador[4]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.549      ;
-; 1.257 ; contador[7]  ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.550      ;
+; 0.743 ; contador[1]  ; contador[1]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.037      ;
+; 0.743 ; contador[3]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.037      ;
+; 0.745 ; contador[4]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.039      ;
+; 0.745 ; contador[23] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.039      ;
+; 0.745 ; contador[25] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.039      ;
+; 0.746 ; contador[20] ; contador[20] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.040      ;
+; 0.746 ; contador[21] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.040      ;
+; 0.746 ; contador[27] ; contador[27] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.040      ;
+; 0.748 ; contador[24] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.042      ;
+; 0.748 ; contador[22] ; contador[22] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.042      ;
+; 0.748 ; contador[26] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.042      ;
+; 0.760 ; contador[11] ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.054      ;
+; 0.760 ; contador[9]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.054      ;
+; 0.761 ; contador[15] ; contador[15] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.055      ;
+; 0.761 ; contador[19] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.055      ;
+; 0.762 ; contador[7]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.056      ;
+; 0.763 ; contador[2]  ; contador[2]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.057      ;
+; 0.763 ; contador[10] ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.057      ;
+; 0.763 ; contador[12] ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.057      ;
+; 0.763 ; contador[14] ; contador[14] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.057      ;
+; 0.763 ; contador[16] ; contador[16] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.057      ;
+; 0.764 ; contador[8]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.058      ;
+; 0.764 ; contador[6]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.058      ;
+; 0.764 ; contador[18] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.058      ;
+; 0.769 ; contador[0]  ; contador[0]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.063      ;
+; 0.770 ; contador[5]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.064      ;
+; 0.784 ; contador[17] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.078      ;
+; 1.098 ; contador[3]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.392      ;
+; 1.098 ; contador[1]  ; contador[2]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.392      ;
+; 1.099 ; contador[23] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.393      ;
+; 1.100 ; contador[21] ; contador[22] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.394      ;
+; 1.100 ; contador[25] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.394      ;
+; 1.106 ; contador[4]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.400      ;
+; 1.107 ; contador[0]  ; contador[1]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.401      ;
+; 1.107 ; contador[20] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.401      ;
+; 1.109 ; contador[24] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.403      ;
+; 1.109 ; contador[26] ; contador[27] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.403      ;
+; 1.109 ; contador[22] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.403      ;
+; 1.115 ; contador[9]  ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.409      ;
+; 1.115 ; contador[11] ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.409      ;
+; 1.115 ; contador[15] ; contador[16] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.409      ;
+; 1.115 ; contador[4]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.409      ;
+; 1.116 ; contador[19] ; contador[20] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.410      ;
+; 1.116 ; contador[7]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.410      ;
+; 1.116 ; contador[0]  ; contador[2]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.410      ;
+; 1.116 ; contador[20] ; contador[22] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.410      ;
+; 1.118 ; contador[22] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.412      ;
+; 1.118 ; contador[24] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.412      ;
+; 1.124 ; contador[2]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.418      ;
+; 1.124 ; contador[10] ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.418      ;
+; 1.124 ; contador[14] ; contador[15] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.418      ;
+; 1.124 ; contador[16] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.418      ;
+; 1.124 ; contador[5]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.418      ;
+; 1.125 ; contador[8]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.419      ;
+; 1.125 ; contador[18] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.419      ;
+; 1.125 ; contador[6]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.419      ;
+; 1.133 ; contador[16] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.427      ;
+; 1.133 ; contador[2]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.427      ;
+; 1.133 ; contador[10] ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.427      ;
+; 1.133 ; contador[14] ; contador[16] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.427      ;
+; 1.134 ; contador[12] ; contador[14] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.427      ;
+; 1.134 ; contador[8]  ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.428      ;
+; 1.134 ; contador[18] ; contador[20] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.428      ;
+; 1.134 ; contador[6]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.428      ;
+; 1.139 ; contador[17] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.433      ;
+; 1.229 ; contador[3]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.523      ;
+; 1.229 ; contador[1]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.523      ;
+; 1.230 ; contador[23] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.524      ;
+; 1.231 ; contador[25] ; contador[27] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.525      ;
+; 1.231 ; contador[21] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.525      ;
+; 1.238 ; contador[3]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.532      ;
+; 1.238 ; contador[1]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.532      ;
+; 1.239 ; contador[23] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.533      ;
+; 1.240 ; contador[21] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.534      ;
+; 1.246 ; contador[9]  ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.540      ;
+; 1.246 ; contador[15] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.540      ;
+; 1.246 ; contador[4]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.540      ;
+; 1.247 ; contador[19] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.541      ;
+; 1.247 ; contador[7]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.541      ;
+; 1.247 ; contador[0]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.541      ;
+; 1.247 ; contador[20] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.541      ;
+; 1.249 ; contador[22] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.543      ;
+; 1.249 ; contador[24] ; contador[27] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.543      ;
+; 1.255 ; contador[15] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.549      ;
+; 1.255 ; contador[9]  ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.549      ;
+; 1.255 ; contador[4]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.549      ;
+; 1.255 ; contador[5]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.549      ;
+; 1.256 ; contador[19] ; contador[22] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.550      ;
+; 1.256 ; contador[11] ; contador[14] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.549      ;
+; 1.256 ; contador[7]  ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.550      ;
+; 1.256 ; contador[0]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.550      ;
+; 1.256 ; contador[20] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.550      ;
+; 1.258 ; contador[22] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.552      ;
+; 1.264 ; contador[16] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.558      ;
+; 1.264 ; contador[2]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.558      ;
+; 1.264 ; contador[14] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.558      ;
+; 1.264 ; contador[5]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.558      ;
+; 1.265 ; contador[12] ; contador[15] ; Clkin        ; Clkin       ; 0.000        ; 0.081      ; 1.558      ;
+; 1.265 ; contador[8]  ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.559      ;
+; 1.265 ; contador[18] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.082      ; 1.559      ;
 +-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -398,7 +398,7 @@ No synchronizer chains to report.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 207.68 MHz ; 207.68 MHz      ; Clkin      ;      ;
+; 237.36 MHz ; 237.36 MHz      ; Clkin      ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -408,7 +408,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; Clkin ; -3.815 ; -96.054           ;
+; Clkin ; -3.213 ; -86.385           ;
 +-------+--------+-------------------+
 
 
@@ -417,7 +417,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; Clkin ; 0.548 ; 0.000             ;
+; Clkin ; 0.691 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -447,106 +447,106 @@ No paths to report.
 +--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
-; -3.815 ; contador[8]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.738      ;
-; -3.815 ; contador[8]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.738      ;
-; -3.815 ; contador[8]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.738      ;
-; -3.567 ; contador[9]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.490      ;
-; -3.567 ; contador[9]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.490      ;
-; -3.567 ; contador[9]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.490      ;
-; -3.558 ; contador[2]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.481      ;
-; -3.558 ; contador[2]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.481      ;
-; -3.558 ; contador[2]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.481      ;
-; -3.557 ; contador[1]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.480      ;
-; -3.557 ; contador[1]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.480      ;
-; -3.557 ; contador[1]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.480      ;
-; -3.539 ; contador[17] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.539     ; 4.002      ;
-; -3.539 ; contador[17] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.539     ; 4.002      ;
-; -3.539 ; contador[17] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.539     ; 4.002      ;
-; -3.519 ; contador[10] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.442      ;
-; -3.519 ; contador[10] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.442      ;
-; -3.519 ; contador[10] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.442      ;
-; -3.487 ; contador[26] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.539     ; 3.950      ;
-; -3.487 ; contador[26] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.539     ; 3.950      ;
-; -3.487 ; contador[26] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.539     ; 3.950      ;
-; -3.462 ; contador[8]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.392      ;
-; -3.462 ; contador[8]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.392      ;
-; -3.462 ; contador[8]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.392      ;
-; -3.462 ; contador[8]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.392      ;
-; -3.462 ; contador[8]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.392      ;
-; -3.462 ; contador[8]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.392      ;
-; -3.462 ; contador[8]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.392      ;
-; -3.462 ; contador[8]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.392      ;
-; -3.462 ; contador[8]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.392      ;
-; -3.462 ; contador[8]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.392      ;
-; -3.462 ; contador[8]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.392      ;
-; -3.462 ; contador[8]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.392      ;
-; -3.462 ; contador[8]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.392      ;
-; -3.462 ; contador[8]  ; contador[13] ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.392      ;
-; -3.407 ; contador[0]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.330      ;
-; -3.407 ; contador[0]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.330      ;
-; -3.407 ; contador[0]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.330      ;
-; -3.367 ; contador[8]  ; contador[23] ; Clkin        ; Clkin       ; 1.000        ; 0.369      ; 4.738      ;
-; -3.367 ; contador[8]  ; contador[17] ; Clkin        ; Clkin       ; 1.000        ; 0.369      ; 4.738      ;
-; -3.367 ; contador[8]  ; contador[19] ; Clkin        ; Clkin       ; 1.000        ; 0.369      ; 4.738      ;
-; -3.367 ; contador[8]  ; contador[18] ; Clkin        ; Clkin       ; 1.000        ; 0.369      ; 4.738      ;
-; -3.367 ; contador[8]  ; contador[21] ; Clkin        ; Clkin       ; 1.000        ; 0.369      ; 4.738      ;
-; -3.367 ; contador[8]  ; contador[24] ; Clkin        ; Clkin       ; 1.000        ; 0.369      ; 4.738      ;
-; -3.367 ; contador[8]  ; contador[25] ; Clkin        ; Clkin       ; 1.000        ; 0.369      ; 4.738      ;
-; -3.367 ; contador[8]  ; contador[26] ; Clkin        ; Clkin       ; 1.000        ; 0.369      ; 4.738      ;
-; -3.358 ; contador[23] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.539     ; 3.821      ;
-; -3.358 ; contador[23] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.539     ; 3.821      ;
-; -3.358 ; contador[23] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.539     ; 3.821      ;
-; -3.356 ; contador[13] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.279      ;
-; -3.356 ; contador[13] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.279      ;
-; -3.356 ; contador[13] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.279      ;
-; -3.353 ; contador[18] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.539     ; 3.816      ;
-; -3.353 ; contador[18] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.539     ; 3.816      ;
-; -3.353 ; contador[18] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.539     ; 3.816      ;
-; -3.319 ; contador[21] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.539     ; 3.782      ;
-; -3.319 ; contador[21] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.539     ; 3.782      ;
-; -3.319 ; contador[21] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.539     ; 3.782      ;
-; -3.310 ; contador[6]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.233      ;
-; -3.310 ; contador[6]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.233      ;
-; -3.310 ; contador[6]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.233      ;
-; -3.279 ; contador[27] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.209      ;
-; -3.279 ; contador[27] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.209      ;
-; -3.279 ; contador[27] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.209      ;
-; -3.272 ; contador[3]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.195      ;
-; -3.272 ; contador[3]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.195      ;
-; -3.272 ; contador[3]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.195      ;
-; -3.256 ; contador[5]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.179      ;
-; -3.256 ; contador[5]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.179      ;
-; -3.256 ; contador[5]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.179      ;
-; -3.252 ; contador[4]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.175      ;
-; -3.252 ; contador[4]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.175      ;
-; -3.252 ; contador[4]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.079     ; 4.175      ;
-; -3.245 ; contador[2]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.175      ;
-; -3.245 ; contador[2]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.175      ;
-; -3.245 ; contador[2]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.175      ;
-; -3.245 ; contador[2]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.175      ;
-; -3.245 ; contador[2]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.175      ;
-; -3.245 ; contador[2]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.175      ;
-; -3.245 ; contador[2]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.175      ;
-; -3.245 ; contador[2]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.175      ;
-; -3.245 ; contador[2]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.175      ;
-; -3.245 ; contador[2]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.175      ;
-; -3.245 ; contador[2]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.175      ;
-; -3.245 ; contador[2]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.175      ;
-; -3.245 ; contador[2]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.175      ;
-; -3.245 ; contador[2]  ; contador[13] ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.175      ;
-; -3.244 ; contador[1]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.174      ;
-; -3.244 ; contador[1]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.174      ;
-; -3.244 ; contador[1]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.174      ;
-; -3.244 ; contador[1]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.174      ;
-; -3.244 ; contador[1]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.174      ;
-; -3.244 ; contador[1]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.174      ;
-; -3.244 ; contador[1]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.174      ;
-; -3.244 ; contador[1]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.174      ;
-; -3.244 ; contador[1]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.174      ;
-; -3.244 ; contador[1]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.174      ;
-; -3.244 ; contador[1]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.174      ;
-; -3.244 ; contador[1]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.174      ;
-; -3.244 ; contador[1]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.072     ; 4.174      ;
+; -3.213 ; contador[7]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.141      ;
+; -3.213 ; contador[7]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.141      ;
+; -3.213 ; contador[7]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.141      ;
+; -3.213 ; contador[7]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.141      ;
+; -3.213 ; contador[7]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.141      ;
+; -3.213 ; contador[7]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.141      ;
+; -3.213 ; contador[7]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.141      ;
+; -3.213 ; contador[7]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.141      ;
+; -3.213 ; contador[7]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.141      ;
+; -3.213 ; contador[7]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.141      ;
+; -3.213 ; contador[7]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.141      ;
+; -3.213 ; contador[7]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.141      ;
+; -3.213 ; contador[7]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.141      ;
+; -3.131 ; contador[15] ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.073     ; 4.060      ;
+; -3.131 ; contador[15] ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.073     ; 4.060      ;
+; -3.131 ; contador[15] ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.073     ; 4.060      ;
+; -3.131 ; contador[15] ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.073     ; 4.060      ;
+; -3.131 ; contador[15] ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.073     ; 4.060      ;
+; -3.131 ; contador[15] ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.073     ; 4.060      ;
+; -3.131 ; contador[15] ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.073     ; 4.060      ;
+; -3.131 ; contador[15] ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.073     ; 4.060      ;
+; -3.131 ; contador[15] ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.073     ; 4.060      ;
+; -3.131 ; contador[15] ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.073     ; 4.060      ;
+; -3.131 ; contador[15] ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.073     ; 4.060      ;
+; -3.131 ; contador[15] ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.073     ; 4.060      ;
+; -3.131 ; contador[15] ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.073     ; 4.060      ;
+; -3.120 ; contador[12] ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.048      ;
+; -3.120 ; contador[12] ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.048      ;
+; -3.120 ; contador[12] ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.048      ;
+; -3.120 ; contador[12] ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.048      ;
+; -3.120 ; contador[12] ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.048      ;
+; -3.120 ; contador[12] ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.048      ;
+; -3.120 ; contador[12] ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.048      ;
+; -3.120 ; contador[12] ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.048      ;
+; -3.120 ; contador[12] ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.048      ;
+; -3.120 ; contador[12] ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.048      ;
+; -3.120 ; contador[12] ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.048      ;
+; -3.120 ; contador[12] ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.048      ;
+; -3.120 ; contador[12] ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.048      ;
+; -3.098 ; contador[6]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.026      ;
+; -3.098 ; contador[6]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.026      ;
+; -3.098 ; contador[6]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.026      ;
+; -3.098 ; contador[6]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.026      ;
+; -3.098 ; contador[6]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.026      ;
+; -3.098 ; contador[6]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.026      ;
+; -3.098 ; contador[6]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.026      ;
+; -3.098 ; contador[6]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.026      ;
+; -3.098 ; contador[6]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.026      ;
+; -3.098 ; contador[6]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.026      ;
+; -3.098 ; contador[6]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.026      ;
+; -3.098 ; contador[6]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.026      ;
+; -3.098 ; contador[6]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 4.026      ;
+; -3.053 ; contador[11] ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.981      ;
+; -3.053 ; contador[11] ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.981      ;
+; -3.053 ; contador[11] ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.981      ;
+; -3.053 ; contador[11] ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.981      ;
+; -3.053 ; contador[11] ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.981      ;
+; -3.053 ; contador[11] ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.981      ;
+; -3.053 ; contador[11] ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.981      ;
+; -3.053 ; contador[11] ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.981      ;
+; -3.053 ; contador[11] ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.981      ;
+; -3.053 ; contador[11] ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.981      ;
+; -3.053 ; contador[11] ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.981      ;
+; -3.053 ; contador[11] ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.981      ;
+; -3.053 ; contador[11] ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.981      ;
+; -3.025 ; contador[9]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.953      ;
+; -3.025 ; contador[9]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.953      ;
+; -3.025 ; contador[9]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.953      ;
+; -3.025 ; contador[9]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.953      ;
+; -3.025 ; contador[9]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.953      ;
+; -3.025 ; contador[9]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.953      ;
+; -3.025 ; contador[9]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.953      ;
+; -3.025 ; contador[9]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.953      ;
+; -3.025 ; contador[9]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.953      ;
+; -3.025 ; contador[9]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.953      ;
+; -3.025 ; contador[9]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.953      ;
+; -3.025 ; contador[9]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.953      ;
+; -3.025 ; contador[9]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.953      ;
+; -3.021 ; contador[8]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.949      ;
+; -3.021 ; contador[8]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.949      ;
+; -3.021 ; contador[8]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.949      ;
+; -3.021 ; contador[8]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.949      ;
+; -3.021 ; contador[8]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.949      ;
+; -3.021 ; contador[8]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.949      ;
+; -3.021 ; contador[8]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.949      ;
+; -3.021 ; contador[8]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.949      ;
+; -3.021 ; contador[8]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.949      ;
+; -3.021 ; contador[8]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.949      ;
+; -3.021 ; contador[8]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.949      ;
+; -3.021 ; contador[8]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.949      ;
+; -3.021 ; contador[8]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.949      ;
+; -2.980 ; contador[7]  ; contador[15] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.908      ;
+; -2.980 ; contador[7]  ; contador[24] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.908      ;
+; -2.980 ; contador[7]  ; contador[14] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.908      ;
+; -2.980 ; contador[7]  ; contador[16] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.908      ;
+; -2.980 ; contador[7]  ; contador[17] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.908      ;
+; -2.980 ; contador[7]  ; contador[18] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.908      ;
+; -2.980 ; contador[7]  ; contador[19] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.908      ;
+; -2.980 ; contador[7]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.908      ;
+; -2.980 ; contador[7]  ; contador[21] ; Clkin        ; Clkin       ; 1.000        ; -0.074     ; 3.908      ;
 +--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -555,106 +555,106 @@ No paths to report.
 +-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
-; 0.548 ; contador[20] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.539      ; 1.282      ;
-; 0.551 ; contador[22] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.539      ; 1.285      ;
-; 0.566 ; contador[22] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.539      ; 1.300      ;
-; 0.670 ; contador[20] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.539      ; 1.404      ;
-; 0.672 ; contador[19] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 0.958      ;
-; 0.673 ; contador[22] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.539      ; 1.407      ;
-; 0.677 ; contador[21] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 0.963      ;
-; 0.685 ; contador[20] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.539      ; 1.419      ;
-; 0.687 ; contador[17] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 0.973      ;
-; 0.688 ; contador[22] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.539      ; 1.422      ;
-; 0.688 ; contador[25] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 0.974      ;
-; 0.691 ; contador[23] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 0.977      ;
-; 0.693 ; contador[18] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 0.979      ;
-; 0.693 ; contador[1]  ; contador[1]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 0.960      ;
-; 0.694 ; contador[24] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 0.980      ;
-; 0.694 ; contador[26] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 0.980      ;
-; 0.695 ; contador[4]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 0.962      ;
-; 0.695 ; contador[5]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 0.962      ;
-; 0.696 ; contador[20] ; contador[20] ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 0.963      ;
-; 0.698 ; contador[2]  ; contador[2]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 0.965      ;
-; 0.699 ; contador[22] ; contador[22] ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 0.966      ;
-; 0.704 ; contador[13] ; contador[13] ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 0.971      ;
-; 0.705 ; contador[3]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 0.972      ;
-; 0.705 ; contador[9]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 0.972      ;
-; 0.705 ; contador[11] ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 0.972      ;
-; 0.708 ; contador[27] ; contador[27] ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 0.975      ;
-; 0.708 ; contador[7]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 0.975      ;
-; 0.710 ; contador[12] ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 0.977      ;
-; 0.711 ; contador[8]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 0.978      ;
-; 0.711 ; contador[10] ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 0.978      ;
-; 0.718 ; contador[6]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 0.985      ;
-; 0.721 ; contador[0]  ; contador[0]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 0.988      ;
-; 0.771 ; contador[13] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.508      ;
-; 0.792 ; contador[20] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.539      ; 1.526      ;
-; 0.800 ; contador[13] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.537      ;
-; 0.802 ; contador[12] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.539      ;
-; 0.807 ; contador[20] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.539      ; 1.541      ;
-; 0.818 ; contador[12] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.555      ;
-; 0.893 ; contador[13] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.630      ;
-; 0.894 ; contador[11] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.631      ;
-; 0.923 ; contador[11] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.660      ;
-; 0.924 ; contador[12] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.661      ;
-; 0.925 ; contador[10] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.662      ;
-; 0.941 ; contador[10] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.678      ;
-; 1.009 ; contador[17] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 1.295      ;
-; 1.010 ; contador[25] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 1.296      ;
-; 1.011 ; contador[18] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 1.297      ;
-; 1.012 ; contador[24] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 1.298      ;
-; 1.014 ; contador[4]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.281      ;
-; 1.015 ; contador[23] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 1.301      ;
-; 1.015 ; contador[13] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.752      ;
-; 1.015 ; contador[1]  ; contador[2]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.282      ;
-; 1.016 ; contador[0]  ; contador[1]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.283      ;
-; 1.016 ; contador[11] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.753      ;
-; 1.017 ; contador[2]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.284      ;
-; 1.017 ; contador[9]  ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.754      ;
-; 1.019 ; contador[5]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.286      ;
-; 1.027 ; contador[3]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.294      ;
-; 1.027 ; contador[11] ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.294      ;
-; 1.027 ; contador[9]  ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.294      ;
-; 1.028 ; contador[24] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 1.314      ;
-; 1.028 ; contador[12] ; contador[13] ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.295      ;
-; 1.029 ; contador[8]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.296      ;
-; 1.029 ; contador[10] ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.296      ;
-; 1.029 ; contador[4]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.296      ;
-; 1.030 ; contador[20] ; contador[22] ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.297      ;
-; 1.031 ; contador[0]  ; contador[2]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.298      ;
-; 1.032 ; contador[7]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.299      ;
-; 1.032 ; contador[2]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.299      ;
-; 1.037 ; contador[6]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.304      ;
-; 1.045 ; contador[9]  ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.782      ;
-; 1.045 ; contador[10] ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.312      ;
-; 1.045 ; contador[8]  ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.312      ;
-; 1.046 ; contador[12] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.783      ;
-; 1.047 ; contador[10] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.784      ;
-; 1.047 ; contador[8]  ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.784      ;
-; 1.052 ; contador[6]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.319      ;
-; 1.063 ; contador[8]  ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.800      ;
-; 1.090 ; contador[19] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 1.376      ;
-; 1.098 ; contador[21] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 1.384      ;
-; 1.102 ; contador[17] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 1.388      ;
-; 1.110 ; contador[23] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 1.396      ;
-; 1.111 ; contador[1]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.378      ;
-; 1.116 ; contador[5]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.383      ;
-; 1.120 ; contador[11] ; contador[13] ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.387      ;
-; 1.121 ; contador[9]  ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.388      ;
-; 1.121 ; contador[3]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.388      ;
-; 1.123 ; contador[21] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 1.409      ;
-; 1.124 ; contador[15] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.543      ; 1.862      ;
-; 1.127 ; contador[7]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.394      ;
-; 1.133 ; contador[18] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 1.419      ;
-; 1.136 ; contador[4]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.403      ;
-; 1.137 ; contador[23] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.091      ; 1.423      ;
-; 1.137 ; contador[13] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.874      ;
-; 1.137 ; contador[1]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.404      ;
-; 1.138 ; contador[11] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.875      ;
-; 1.138 ; contador[0]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.405      ;
-; 1.139 ; contador[9]  ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.542      ; 1.876      ;
-; 1.139 ; contador[2]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.406      ;
-; 1.141 ; contador[5]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.072      ; 1.408      ;
+; 0.691 ; contador[4]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 0.960      ;
+; 0.691 ; contador[1]  ; contador[1]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 0.960      ;
+; 0.692 ; contador[3]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 0.961      ;
+; 0.694 ; contador[27] ; contador[27] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 0.962      ;
+; 0.694 ; contador[25] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 0.962      ;
+; 0.695 ; contador[20] ; contador[20] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 0.963      ;
+; 0.695 ; contador[21] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 0.963      ;
+; 0.696 ; contador[23] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 0.964      ;
+; 0.697 ; contador[22] ; contador[22] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 0.965      ;
+; 0.698 ; contador[24] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 0.966      ;
+; 0.699 ; contador[26] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 0.967      ;
+; 0.703 ; contador[11] ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 0.972      ;
+; 0.704 ; contador[9]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 0.973      ;
+; 0.705 ; contador[19] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 0.973      ;
+; 0.706 ; contador[7]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 0.975      ;
+; 0.707 ; contador[15] ; contador[15] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 0.975      ;
+; 0.708 ; contador[12] ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 0.977      ;
+; 0.709 ; contador[2]  ; contador[2]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 0.978      ;
+; 0.709 ; contador[8]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 0.978      ;
+; 0.709 ; contador[10] ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 0.978      ;
+; 0.709 ; contador[14] ; contador[14] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 0.977      ;
+; 0.710 ; contador[6]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 0.979      ;
+; 0.710 ; contador[16] ; contador[16] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 0.978      ;
+; 0.711 ; contador[18] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 0.979      ;
+; 0.715 ; contador[5]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 0.984      ;
+; 0.719 ; contador[0]  ; contador[0]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 0.988      ;
+; 0.727 ; contador[17] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 0.995      ;
+; 1.010 ; contador[4]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.279      ;
+; 1.013 ; contador[1]  ; contador[2]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.282      ;
+; 1.014 ; contador[3]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.283      ;
+; 1.014 ; contador[0]  ; contador[1]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.283      ;
+; 1.014 ; contador[20] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.282      ;
+; 1.016 ; contador[25] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.284      ;
+; 1.016 ; contador[22] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.284      ;
+; 1.017 ; contador[24] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.285      ;
+; 1.018 ; contador[26] ; contador[27] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.286      ;
+; 1.019 ; contador[21] ; contador[22] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.287      ;
+; 1.020 ; contador[23] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.288      ;
+; 1.025 ; contador[11] ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.294      ;
+; 1.025 ; contador[4]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.294      ;
+; 1.026 ; contador[9]  ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.295      ;
+; 1.027 ; contador[2]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.296      ;
+; 1.027 ; contador[19] ; contador[20] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.295      ;
+; 1.027 ; contador[10] ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.296      ;
+; 1.027 ; contador[8]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.296      ;
+; 1.027 ; contador[14] ; contador[15] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.295      ;
+; 1.028 ; contador[6]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.297      ;
+; 1.028 ; contador[16] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.296      ;
+; 1.029 ; contador[18] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.297      ;
+; 1.029 ; contador[0]  ; contador[2]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.298      ;
+; 1.029 ; contador[20] ; contador[22] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.297      ;
+; 1.030 ; contador[7]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.299      ;
+; 1.031 ; contador[15] ; contador[16] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.299      ;
+; 1.031 ; contador[22] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.299      ;
+; 1.032 ; contador[24] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.300      ;
+; 1.039 ; contador[5]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.308      ;
+; 1.043 ; contador[12] ; contador[14] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.311      ;
+; 1.043 ; contador[2]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.312      ;
+; 1.043 ; contador[10] ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.312      ;
+; 1.043 ; contador[8]  ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.312      ;
+; 1.043 ; contador[14] ; contador[16] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.311      ;
+; 1.044 ; contador[16] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.312      ;
+; 1.044 ; contador[6]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.313      ;
+; 1.045 ; contador[18] ; contador[20] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.313      ;
+; 1.049 ; contador[17] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.317      ;
+; 1.109 ; contador[1]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.378      ;
+; 1.110 ; contador[3]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.379      ;
+; 1.112 ; contador[25] ; contador[27] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.380      ;
+; 1.116 ; contador[23] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.384      ;
+; 1.116 ; contador[21] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.384      ;
+; 1.119 ; contador[9]  ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.388      ;
+; 1.121 ; contador[19] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.389      ;
+; 1.125 ; contador[7]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.394      ;
+; 1.125 ; contador[15] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.393      ;
+; 1.132 ; contador[4]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.401      ;
+; 1.135 ; contador[1]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.404      ;
+; 1.136 ; contador[3]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.405      ;
+; 1.136 ; contador[0]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.405      ;
+; 1.136 ; contador[20] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.404      ;
+; 1.137 ; contador[5]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.406      ;
+; 1.138 ; contador[22] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.406      ;
+; 1.139 ; contador[24] ; contador[27] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.407      ;
+; 1.141 ; contador[21] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.409      ;
+; 1.142 ; contador[17] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.410      ;
+; 1.142 ; contador[23] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.410      ;
+; 1.147 ; contador[4]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.416      ;
+; 1.148 ; contador[11] ; contador[14] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.416      ;
+; 1.148 ; contador[9]  ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.417      ;
+; 1.149 ; contador[12] ; contador[15] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.417      ;
+; 1.149 ; contador[19] ; contador[22] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.417      ;
+; 1.149 ; contador[2]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.418      ;
+; 1.149 ; contador[8]  ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.418      ;
+; 1.149 ; contador[14] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.417      ;
+; 1.150 ; contador[6]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.419      ;
+; 1.150 ; contador[16] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.418      ;
+; 1.151 ; contador[18] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.419      ;
+; 1.151 ; contador[0]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.420      ;
+; 1.151 ; contador[20] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.419      ;
+; 1.152 ; contador[7]  ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.074      ; 1.421      ;
+; 1.153 ; contador[15] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.073      ; 1.421      ;
 +-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -669,7 +669,7 @@ No synchronizer chains to report.
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; Clkin ; -1.140 ; -27.031           ;
+; Clkin ; -0.847 ; -22.314           ;
 +-------+--------+-------------------+
 
 
@@ -678,7 +678,7 @@ No synchronizer chains to report.
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; Clkin ; 0.256 ; 0.000             ;
+; Clkin ; 0.297 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -699,7 +699,7 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; Clkin ; -3.000 ; -33.025                         ;
+; Clkin ; -3.000 ; -32.764                         ;
 +-------+--------+---------------------------------+
 
 
@@ -708,106 +708,106 @@ No paths to report.
 +--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
-; -1.140 ; contador[8]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 2.086      ;
-; -1.140 ; contador[8]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 2.086      ;
-; -1.140 ; contador[8]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 2.086      ;
-; -1.080 ; contador[2]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 2.026      ;
-; -1.080 ; contador[2]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 2.026      ;
-; -1.080 ; contador[2]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 2.026      ;
-; -1.079 ; contador[1]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 2.025      ;
-; -1.079 ; contador[1]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 2.025      ;
-; -1.079 ; contador[1]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 2.025      ;
-; -1.055 ; contador[17] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.237     ; 1.805      ;
-; -1.055 ; contador[17] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.237     ; 1.805      ;
-; -1.055 ; contador[17] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.237     ; 1.805      ;
-; -1.054 ; contador[27] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 2.004      ;
-; -1.054 ; contador[27] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 2.004      ;
-; -1.054 ; contador[27] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 2.004      ;
-; -1.033 ; contador[9]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.979      ;
-; -1.033 ; contador[9]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.979      ;
-; -1.033 ; contador[9]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.979      ;
-; -1.031 ; contador[26] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.237     ; 1.781      ;
-; -1.031 ; contador[26] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.237     ; 1.781      ;
-; -1.031 ; contador[26] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.237     ; 1.781      ;
-; -1.008 ; contador[10] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.954      ;
-; -1.008 ; contador[10] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.954      ;
-; -1.008 ; contador[10] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.954      ;
-; -0.987 ; contador[0]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.933      ;
-; -0.987 ; contador[0]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.933      ;
-; -0.987 ; contador[0]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.933      ;
-; -0.966 ; contador[18] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.237     ; 1.716      ;
-; -0.966 ; contador[18] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.237     ; 1.716      ;
-; -0.966 ; contador[18] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.237     ; 1.716      ;
-; -0.960 ; contador[23] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.237     ; 1.710      ;
-; -0.960 ; contador[23] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.237     ; 1.710      ;
-; -0.960 ; contador[23] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.237     ; 1.710      ;
-; -0.960 ; contador[8]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.911      ;
-; -0.960 ; contador[8]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.911      ;
-; -0.960 ; contador[8]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.911      ;
-; -0.960 ; contador[8]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.911      ;
-; -0.960 ; contador[8]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.911      ;
-; -0.960 ; contador[8]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.911      ;
-; -0.960 ; contador[8]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.911      ;
-; -0.960 ; contador[8]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.911      ;
-; -0.960 ; contador[8]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.911      ;
-; -0.960 ; contador[8]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.911      ;
-; -0.960 ; contador[8]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.911      ;
-; -0.960 ; contador[8]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.911      ;
-; -0.960 ; contador[8]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.911      ;
-; -0.960 ; contador[8]  ; contador[13] ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.911      ;
-; -0.954 ; contador[13] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.900      ;
-; -0.954 ; contador[13] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.900      ;
-; -0.954 ; contador[13] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.900      ;
-; -0.953 ; contador[21] ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.237     ; 1.703      ;
-; -0.953 ; contador[21] ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.237     ; 1.703      ;
-; -0.953 ; contador[21] ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.237     ; 1.703      ;
-; -0.951 ; contador[6]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.897      ;
-; -0.951 ; contador[6]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.897      ;
-; -0.951 ; contador[6]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.897      ;
-; -0.947 ; contador[8]  ; contador[23] ; Clkin        ; Clkin       ; 1.000        ; 0.152      ; 2.086      ;
-; -0.947 ; contador[8]  ; contador[17] ; Clkin        ; Clkin       ; 1.000        ; 0.152      ; 2.086      ;
-; -0.947 ; contador[8]  ; contador[19] ; Clkin        ; Clkin       ; 1.000        ; 0.152      ; 2.086      ;
-; -0.947 ; contador[8]  ; contador[18] ; Clkin        ; Clkin       ; 1.000        ; 0.152      ; 2.086      ;
-; -0.947 ; contador[8]  ; contador[21] ; Clkin        ; Clkin       ; 1.000        ; 0.152      ; 2.086      ;
-; -0.947 ; contador[8]  ; contador[24] ; Clkin        ; Clkin       ; 1.000        ; 0.152      ; 2.086      ;
-; -0.947 ; contador[8]  ; contador[25] ; Clkin        ; Clkin       ; 1.000        ; 0.152      ; 2.086      ;
-; -0.947 ; contador[8]  ; contador[26] ; Clkin        ; Clkin       ; 1.000        ; 0.152      ; 2.086      ;
-; -0.944 ; contador[5]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.890      ;
-; -0.944 ; contador[5]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.890      ;
-; -0.944 ; contador[5]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.890      ;
-; -0.942 ; contador[4]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.888      ;
-; -0.942 ; contador[4]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.888      ;
-; -0.942 ; contador[4]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.888      ;
-; -0.936 ; contador[1]  ; contador[14] ; Clkin        ; Clkin       ; 1.000        ; -0.038     ; 1.885      ;
-; -0.912 ; contador[3]  ; contador[20] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.858      ;
-; -0.912 ; contador[3]  ; contador[22] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.858      ;
-; -0.912 ; contador[3]  ; contador[27] ; Clkin        ; Clkin       ; 1.000        ; -0.041     ; 1.858      ;
-; -0.900 ; contador[2]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.851      ;
-; -0.900 ; contador[2]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.851      ;
-; -0.900 ; contador[2]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.851      ;
-; -0.900 ; contador[2]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.851      ;
-; -0.900 ; contador[2]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.851      ;
-; -0.900 ; contador[2]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.851      ;
-; -0.900 ; contador[2]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.851      ;
-; -0.900 ; contador[2]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.851      ;
-; -0.900 ; contador[2]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.851      ;
-; -0.900 ; contador[2]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.851      ;
-; -0.900 ; contador[2]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.851      ;
-; -0.900 ; contador[2]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.851      ;
-; -0.900 ; contador[2]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.851      ;
-; -0.900 ; contador[2]  ; contador[13] ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.851      ;
-; -0.899 ; contador[1]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.850      ;
-; -0.899 ; contador[1]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.850      ;
-; -0.899 ; contador[1]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.850      ;
-; -0.899 ; contador[1]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.850      ;
-; -0.899 ; contador[1]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.850      ;
-; -0.899 ; contador[1]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.850      ;
-; -0.899 ; contador[1]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.850      ;
-; -0.899 ; contador[1]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.850      ;
-; -0.899 ; contador[1]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.850      ;
-; -0.899 ; contador[1]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.850      ;
-; -0.899 ; contador[1]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.850      ;
-; -0.899 ; contador[1]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.036     ; 1.850      ;
+; -0.847 ; contador[7]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.797      ;
+; -0.847 ; contador[7]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.797      ;
+; -0.847 ; contador[7]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.797      ;
+; -0.847 ; contador[7]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.797      ;
+; -0.847 ; contador[7]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.797      ;
+; -0.847 ; contador[7]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.797      ;
+; -0.847 ; contador[7]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.797      ;
+; -0.847 ; contador[7]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.797      ;
+; -0.847 ; contador[7]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.797      ;
+; -0.847 ; contador[7]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.797      ;
+; -0.847 ; contador[7]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.797      ;
+; -0.847 ; contador[7]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.797      ;
+; -0.847 ; contador[7]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.797      ;
+; -0.813 ; contador[12] ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.763      ;
+; -0.813 ; contador[12] ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.763      ;
+; -0.813 ; contador[12] ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.763      ;
+; -0.813 ; contador[12] ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.763      ;
+; -0.813 ; contador[12] ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.763      ;
+; -0.813 ; contador[12] ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.763      ;
+; -0.813 ; contador[12] ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.763      ;
+; -0.813 ; contador[12] ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.763      ;
+; -0.813 ; contador[12] ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.763      ;
+; -0.813 ; contador[12] ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.763      ;
+; -0.813 ; contador[12] ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.763      ;
+; -0.813 ; contador[12] ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.763      ;
+; -0.813 ; contador[12] ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.763      ;
+; -0.806 ; contador[6]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.756      ;
+; -0.806 ; contador[6]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.756      ;
+; -0.806 ; contador[6]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.756      ;
+; -0.806 ; contador[6]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.756      ;
+; -0.806 ; contador[6]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.756      ;
+; -0.806 ; contador[6]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.756      ;
+; -0.806 ; contador[6]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.756      ;
+; -0.806 ; contador[6]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.756      ;
+; -0.806 ; contador[6]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.756      ;
+; -0.806 ; contador[6]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.756      ;
+; -0.806 ; contador[6]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.756      ;
+; -0.806 ; contador[6]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.756      ;
+; -0.806 ; contador[6]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.756      ;
+; -0.803 ; contador[1]  ; contador[13] ; Clkin        ; Clkin       ; 1.000        ; -0.038     ; 1.752      ;
+; -0.792 ; contador[15] ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[15] ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[15] ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[15] ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[15] ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[15] ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[15] ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[15] ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[15] ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[15] ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[15] ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[15] ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[15] ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[11] ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[11] ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[11] ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[11] ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[11] ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[11] ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[11] ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[11] ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[11] ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[11] ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[11] ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[11] ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.792 ; contador[11] ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.742      ;
+; -0.791 ; contador[0]  ; contador[13] ; Clkin        ; Clkin       ; 1.000        ; -0.038     ; 1.740      ;
+; -0.780 ; contador[9]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.730      ;
+; -0.780 ; contador[9]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.730      ;
+; -0.780 ; contador[9]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.730      ;
+; -0.780 ; contador[9]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.730      ;
+; -0.780 ; contador[9]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.730      ;
+; -0.780 ; contador[9]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.730      ;
+; -0.780 ; contador[9]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.730      ;
+; -0.780 ; contador[9]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.730      ;
+; -0.780 ; contador[9]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.730      ;
+; -0.780 ; contador[9]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.730      ;
+; -0.780 ; contador[9]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.730      ;
+; -0.780 ; contador[9]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.730      ;
+; -0.780 ; contador[9]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.730      ;
+; -0.774 ; contador[8]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.724      ;
+; -0.774 ; contador[8]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.724      ;
+; -0.774 ; contador[8]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.724      ;
+; -0.774 ; contador[8]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.724      ;
+; -0.774 ; contador[8]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.724      ;
+; -0.774 ; contador[8]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.724      ;
+; -0.774 ; contador[8]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.724      ;
+; -0.774 ; contador[8]  ; contador[6]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.724      ;
+; -0.774 ; contador[8]  ; contador[7]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.724      ;
+; -0.774 ; contador[8]  ; contador[11] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.724      ;
+; -0.774 ; contador[8]  ; contador[9]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.724      ;
+; -0.774 ; contador[8]  ; contador[10] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.724      ;
+; -0.774 ; contador[8]  ; contador[12] ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.724      ;
+; -0.760 ; contador[3]  ; contador[4]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.710      ;
+; -0.760 ; contador[3]  ; contador[0]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.710      ;
+; -0.760 ; contador[3]  ; contador[1]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.710      ;
+; -0.760 ; contador[3]  ; contador[2]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.710      ;
+; -0.760 ; contador[3]  ; contador[3]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.710      ;
+; -0.760 ; contador[3]  ; contador[5]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.710      ;
+; -0.760 ; contador[3]  ; contador[8]  ; Clkin        ; Clkin       ; 1.000        ; -0.037     ; 1.710      ;
 +--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -816,106 +816,106 @@ No paths to report.
 +-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
-; 0.256 ; contador[20] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.237      ; 0.577      ;
-; 0.257 ; contador[22] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.237      ; 0.578      ;
-; 0.260 ; contador[22] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.237      ; 0.581      ;
-; 0.289 ; contador[19] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.417      ;
-; 0.291 ; contador[21] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.419      ;
-; 0.297 ; contador[25] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.425      ;
-; 0.297 ; contador[17] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.425      ;
+; 0.297 ; contador[4]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.418      ;
+; 0.297 ; contador[1]  ; contador[1]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.418      ;
+; 0.298 ; contador[3]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.419      ;
 ; 0.298 ; contador[20] ; contador[20] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.419      ;
-; 0.298 ; contador[1]  ; contador[1]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.418      ;
-; 0.299 ; contador[18] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.427      ;
+; 0.298 ; contador[21] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.419      ;
+; 0.298 ; contador[27] ; contador[27] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.419      ;
+; 0.298 ; contador[25] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.419      ;
 ; 0.299 ; contador[22] ; contador[22] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.420      ;
-; 0.299 ; contador[23] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.427      ;
-; 0.299 ; contador[4]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.419      ;
-; 0.299 ; contador[5]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.419      ;
-; 0.300 ; contador[26] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.428      ;
-; 0.300 ; contador[24] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.428      ;
-; 0.300 ; contador[2]  ; contador[2]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.420      ;
-; 0.303 ; contador[13] ; contador[13] ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.423      ;
-; 0.304 ; contador[27] ; contador[27] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.425      ;
-; 0.304 ; contador[3]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.424      ;
-; 0.304 ; contador[11] ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.424      ;
-; 0.305 ; contador[9]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.425      ;
-; 0.306 ; contador[7]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; contador[12] ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.426      ;
-; 0.307 ; contador[8]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.427      ;
-; 0.307 ; contador[10] ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.427      ;
-; 0.310 ; contador[6]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.430      ;
-; 0.311 ; contador[0]  ; contador[0]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.431      ;
-; 0.322 ; contador[20] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.237      ; 0.643      ;
-; 0.323 ; contador[22] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.237      ; 0.644      ;
-; 0.325 ; contador[20] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.237      ; 0.646      ;
-; 0.326 ; contador[22] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.237      ; 0.647      ;
-; 0.377 ; contador[13] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.240      ; 0.701      ;
-; 0.380 ; contador[13] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.240      ; 0.704      ;
-; 0.388 ; contador[20] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.237      ; 0.709      ;
-; 0.391 ; contador[20] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.237      ; 0.712      ;
-; 0.392 ; contador[12] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.240      ; 0.716      ;
-; 0.395 ; contador[12] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.240      ; 0.719      ;
-; 0.443 ; contador[13] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.240      ; 0.767      ;
-; 0.444 ; contador[11] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.240      ; 0.768      ;
-; 0.446 ; contador[17] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.574      ;
-; 0.446 ; contador[25] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.574      ;
-; 0.447 ; contador[1]  ; contador[2]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.567      ;
-; 0.447 ; contador[11] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.240      ; 0.771      ;
-; 0.448 ; contador[23] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.576      ;
-; 0.448 ; contador[5]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.568      ;
-; 0.453 ; contador[3]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.573      ;
-; 0.453 ; contador[11] ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.573      ;
-; 0.454 ; contador[9]  ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.574      ;
-; 0.455 ; contador[7]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.575      ;
-; 0.457 ; contador[18] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.585      ;
-; 0.457 ; contador[4]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.577      ;
-; 0.458 ; contador[24] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.586      ;
-; 0.458 ; contador[0]  ; contador[1]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.578      ;
-; 0.458 ; contador[2]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.578      ;
-; 0.458 ; contador[12] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.240      ; 0.782      ;
+; 0.299 ; contador[23] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.420      ;
+; 0.300 ; contador[24] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.421      ;
+; 0.300 ; contador[26] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.421      ;
+; 0.303 ; contador[11] ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.424      ;
+; 0.304 ; contador[15] ; contador[15] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; contador[9]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; contador[19] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.425      ;
+; 0.305 ; contador[6]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; contador[7]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; contador[12] ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; contador[14] ; contador[14] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.426      ;
+; 0.306 ; contador[2]  ; contador[2]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; contador[8]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; contador[10] ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; contador[16] ; contador[16] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; contador[18] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.427      ;
+; 0.309 ; contador[5]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.430      ;
+; 0.310 ; contador[0]  ; contador[0]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.431      ;
+; 0.315 ; contador[17] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.436      ;
+; 0.446 ; contador[1]  ; contador[2]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.567      ;
+; 0.447 ; contador[3]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.568      ;
+; 0.447 ; contador[21] ; contador[22] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.568      ;
+; 0.447 ; contador[25] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.568      ;
+; 0.448 ; contador[23] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.569      ;
+; 0.452 ; contador[11] ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.573      ;
+; 0.453 ; contador[19] ; contador[20] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.574      ;
+; 0.453 ; contador[9]  ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.574      ;
+; 0.453 ; contador[15] ; contador[16] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.574      ;
+; 0.454 ; contador[7]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.575      ;
+; 0.455 ; contador[4]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.576      ;
+; 0.456 ; contador[20] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.577      ;
+; 0.457 ; contador[0]  ; contador[1]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.578      ;
+; 0.457 ; contador[22] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.578      ;
+; 0.458 ; contador[26] ; contador[27] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.579      ;
+; 0.458 ; contador[24] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.579      ;
+; 0.458 ; contador[5]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.579      ;
+; 0.458 ; contador[4]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.579      ;
 ; 0.459 ; contador[20] ; contador[22] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.580      ;
-; 0.459 ; contador[10] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.240      ; 0.783      ;
-; 0.460 ; contador[4]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.580      ;
-; 0.461 ; contador[24] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.589      ;
-; 0.461 ; contador[0]  ; contador[2]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.581      ;
-; 0.461 ; contador[2]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.581      ;
-; 0.462 ; contador[10] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.240      ; 0.786      ;
-; 0.464 ; contador[12] ; contador[13] ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.584      ;
-; 0.465 ; contador[10] ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.585      ;
-; 0.465 ; contador[8]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.585      ;
-; 0.468 ; contador[6]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.588      ;
-; 0.468 ; contador[10] ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.588      ;
-; 0.468 ; contador[8]  ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.588      ;
-; 0.471 ; contador[6]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.591      ;
-; 0.501 ; contador[19] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.629      ;
-; 0.503 ; contador[21] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.631      ;
-; 0.506 ; contador[21] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.634      ;
-; 0.509 ; contador[17] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.637      ;
-; 0.509 ; contador[13] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.240      ; 0.833      ;
-; 0.510 ; contador[1]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.630      ;
-; 0.510 ; contador[11] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.240      ; 0.834      ;
-; 0.511 ; contador[23] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.639      ;
-; 0.511 ; contador[9]  ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.240      ; 0.835      ;
-; 0.511 ; contador[5]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.631      ;
-; 0.513 ; contador[1]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.633      ;
-; 0.514 ; contador[23] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.642      ;
-; 0.514 ; contador[9]  ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.240      ; 0.838      ;
-; 0.514 ; contador[5]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.634      ;
-; 0.516 ; contador[3]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.636      ;
-; 0.516 ; contador[11] ; contador[13] ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.636      ;
-; 0.517 ; contador[9]  ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.637      ;
-; 0.518 ; contador[7]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.638      ;
-; 0.519 ; contador[3]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.639      ;
-; 0.520 ; contador[9]  ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.640      ;
-; 0.521 ; contador[7]  ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.641      ;
-; 0.523 ; contador[18] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.044      ; 0.651      ;
-; 0.523 ; contador[4]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.643      ;
-; 0.524 ; contador[12] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.240      ; 0.848      ;
-; 0.524 ; contador[0]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.644      ;
-; 0.524 ; contador[2]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.644      ;
-; 0.525 ; contador[10] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.240      ; 0.849      ;
-; 0.525 ; contador[8]  ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.240      ; 0.849      ;
-; 0.526 ; contador[4]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.646      ;
-; 0.527 ; contador[0]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.036      ; 0.647      ;
+; 0.460 ; contador[0]  ; contador[2]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.581      ;
+; 0.460 ; contador[22] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.581      ;
+; 0.461 ; contador[24] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.582      ;
+; 0.463 ; contador[14] ; contador[15] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.584      ;
+; 0.463 ; contador[6]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.584      ;
+; 0.464 ; contador[2]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.585      ;
+; 0.464 ; contador[10] ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.585      ;
+; 0.464 ; contador[8]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.585      ;
+; 0.464 ; contador[18] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.585      ;
+; 0.464 ; contador[17] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.585      ;
+; 0.464 ; contador[16] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.585      ;
+; 0.466 ; contador[12] ; contador[14] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.587      ;
+; 0.466 ; contador[14] ; contador[16] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.587      ;
+; 0.466 ; contador[6]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.587      ;
+; 0.467 ; contador[2]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.588      ;
+; 0.467 ; contador[10] ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.588      ;
+; 0.467 ; contador[18] ; contador[20] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.588      ;
+; 0.467 ; contador[8]  ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.588      ;
+; 0.467 ; contador[16] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.588      ;
+; 0.509 ; contador[1]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.630      ;
+; 0.510 ; contador[3]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.631      ;
+; 0.510 ; contador[21] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.631      ;
+; 0.510 ; contador[25] ; contador[27] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.631      ;
+; 0.511 ; contador[23] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.632      ;
+; 0.512 ; contador[1]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.633      ;
+; 0.513 ; contador[3]  ; contador[6]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.634      ;
+; 0.513 ; contador[21] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.634      ;
+; 0.514 ; contador[23] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.635      ;
+; 0.516 ; contador[19] ; contador[21] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.637      ;
+; 0.516 ; contador[9]  ; contador[11] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.637      ;
+; 0.516 ; contador[15] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.637      ;
+; 0.517 ; contador[7]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.638      ;
+; 0.518 ; contador[11] ; contador[14] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.639      ;
+; 0.519 ; contador[19] ; contador[22] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.640      ;
+; 0.519 ; contador[9]  ; contador[12] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.640      ;
+; 0.519 ; contador[15] ; contador[18] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.640      ;
+; 0.520 ; contador[7]  ; contador[10] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.641      ;
+; 0.521 ; contador[5]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.642      ;
+; 0.521 ; contador[4]  ; contador[7]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.642      ;
+; 0.522 ; contador[20] ; contador[23] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.643      ;
+; 0.523 ; contador[0]  ; contador[3]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.644      ;
+; 0.523 ; contador[22] ; contador[25] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.644      ;
+; 0.524 ; contador[5]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.645      ;
+; 0.524 ; contador[24] ; contador[27] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.645      ;
+; 0.524 ; contador[4]  ; contador[8]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.645      ;
+; 0.525 ; contador[20] ; contador[24] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.646      ;
+; 0.526 ; contador[0]  ; contador[4]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.647      ;
+; 0.526 ; contador[22] ; contador[26] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.647      ;
+; 0.527 ; contador[17] ; contador[19] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.648      ;
+; 0.529 ; contador[12] ; contador[15] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.650      ;
+; 0.529 ; contador[14] ; contador[17] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.650      ;
+; 0.529 ; contador[6]  ; contador[9]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.650      ;
+; 0.530 ; contador[17] ; contador[20] ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.651      ;
+; 0.530 ; contador[2]  ; contador[5]  ; Clkin        ; Clkin       ; 0.000        ; 0.037      ; 0.651      ;
 +-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -925,16 +925,16 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                            ;
-+------------------+----------+-------+----------+---------+---------------------+
-; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -4.119   ; 0.256 ; N/A      ; N/A     ; -3.000              ;
-;  Clkin           ; -4.119   ; 0.256 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -104.146 ; 0.0   ; 0.0      ; 0.0     ; -44.636             ;
-;  Clkin           ; -104.146 ; 0.000 ; N/A      ; N/A     ; -44.636             ;
-+------------------+----------+-------+----------+---------+---------------------+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.481  ; 0.297 ; N/A      ; N/A     ; -3.000              ;
+;  Clkin           ; -3.481  ; 0.297 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -93.942 ; 0.0   ; 0.0      ; 0.0     ; -44.636             ;
+;  Clkin           ; -93.942 ; 0.000 ; N/A      ; N/A     ; -44.636             ;
++------------------+---------+-------+----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -965,7 +965,7 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; Clkout        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; Clkout        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -976,7 +976,7 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; Clkout        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; Clkout        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -987,7 +987,7 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; Clkout        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; Clkout        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -998,7 +998,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; Clkin      ; Clkin    ; 1190     ; 0        ; 0        ; 0        ;
+; Clkin      ; Clkin    ; 1330     ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1008,7 +1008,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; Clkin      ; Clkin    ; 1190     ; 0        ; 0        ; 0        ;
+; Clkin      ; Clkin    ; 1330     ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1035,7 +1035,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Input Ports       ; 0     ; 0    ;
 ; Unconstrained Input Port Paths  ; 0     ; 0    ;
 ; Unconstrained Output Ports      ; 1     ; 1    ;
-; Unconstrained Output Port Paths ; 22    ; 22   ;
+; Unconstrained Output Port Paths ; 23    ; 23   ;
 +---------------------------------+-------+------+
 
 
@@ -1072,7 +1072,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Tue Nov 17 21:09:22 2020
+    Info: Processing started: Tue Dec 22 13:44:56 2020
 Info: Command: quartus_sta Clock_Divider -c Clock_Divider
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1089,14 +1089,14 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.119
+Info (332146): Worst-case setup slack is -3.481
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.119            -104.146 Clkin 
-Info (332146): Worst-case hold slack is 0.612
+    Info (332119):    -3.481             -93.942 Clkin 
+Info (332146): Worst-case hold slack is 0.743
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.612               0.000 Clkin 
+    Info (332119):     0.743               0.000 Clkin 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -1109,14 +1109,14 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.815
+Info (332146): Worst-case setup slack is -3.213
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.815             -96.054 Clkin 
-Info (332146): Worst-case hold slack is 0.548
+    Info (332119):    -3.213             -86.385 Clkin 
+Info (332146): Worst-case hold slack is 0.691
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.548               0.000 Clkin 
+    Info (332119):     0.691               0.000 Clkin 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -1127,26 +1127,26 @@ Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.140
+Info (332146): Worst-case setup slack is -0.847
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.140             -27.031 Clkin 
-Info (332146): Worst-case hold slack is 0.256
+    Info (332119):    -0.847             -22.314 Clkin 
+Info (332146): Worst-case hold slack is 0.297
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.256               0.000 Clkin 
+    Info (332119):     0.297               0.000 Clkin 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -33.025 Clkin 
+    Info (332119):    -3.000             -32.764 Clkin 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4762 megabytes
-    Info: Processing ended: Tue Nov 17 21:09:26 2020
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 4755 megabytes
+    Info: Processing ended: Tue Dec 22 13:44:58 2020
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 
